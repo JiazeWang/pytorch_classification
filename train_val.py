@@ -97,7 +97,7 @@ if torch.cuda.is_available():
 
 
 ##定义优化器与损失函数
-optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=cfg.LR)
+#optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=cfg.LR)
 # optimizer = optim.Adam(model.parameters(), lr=cfg.LR)
 optimizer = optim.SGD(model.parameters(), lr=cfg.LR,
                       momentum=cfg.MOMENTUM, weight_decay=cfg.WEIGHT_DECAY)
