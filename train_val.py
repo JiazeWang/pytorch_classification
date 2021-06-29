@@ -58,6 +58,7 @@ if not cfg.RESUME_EPOCH:
         model = cfg.MODEL_NAMES[cfg.model_name](num_classes=cfg.NUM_CLASSES)
         # #冻结前边一部分层不训练
         ct = 0
+        """
         for child in model.children():
             ct += 1
             # print(child)
@@ -65,6 +66,7 @@ if not cfg.RESUME_EPOCH:
                 print(child)
                 for param in child.parameters():
                     param.requires_grad = False
+        """
     else:
         model = cfg.MODEL_NAMES[cfg.model_name](cfg.model_name,num_classes=cfg.NUM_CLASSES)
         # print(model)
