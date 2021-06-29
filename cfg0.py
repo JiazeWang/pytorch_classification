@@ -4,7 +4,7 @@
 # @author :lxztju
 # @github : https://github.com/lxztju
 import os
-home = os.path.expanduser('~')
+home = '/research/dept8/jzwang/project/ROP/pytorch_classification'
 ##数据集的类别
 NUM_CLASSES = 3
 
@@ -59,4 +59,4 @@ TEST_LABEL_DIR = BASE + 'val.txt'
 
 
 ##训练完成，权重文件的保存路径,默认保存在trained_model下
-TRAINED_MODEL = BASE + 'weights/resnet18/final.pth'
+TRAINED_MODEL = BASE + 'weights/resnet18/.pth'
