@@ -14,7 +14,7 @@ BATCH_SIZE = 32
 #网络默认输入图像的大小
 INPUT_SIZE = 300
 #训练最多的epoch
-MAX_EPOCH = 200
+MAX_EPOCH = 500
 # 使用gpu的数目
 GPUS = 1
 # 从第几个epoch开始resume训练，如果为0，从头开始
@@ -27,9 +27,9 @@ LR = 1e-3
 
 
 # 采用的模型名称
-model_name = 'resnet18'
+model_name = 'vgg11'
 
-from models import Resnet50, Resnet101, Resnext101_32x8d,Resnext101_32x16d, Densenet121, Densenet169, Mobilenetv2, Efficientnet, Resnext101_32x32d, Resnext101_32x48d, resnet18
+from models import Resnet50, Resnet101, Resnext101_32x8d,Resnext101_32x16d, Densenet121, Densenet169, Mobilenetv2, Efficientnet, Resnext101_32x32d, Resnext101_32x48d, resnet18, vgg11
 MODEL_NAMES = {
     'resnext101_32x8d': Resnext101_32x8d,
     'resnext101_32x16d': Resnext101_32x16d,
@@ -42,7 +42,8 @@ MODEL_NAMES = {
     'moblienetv2': Mobilenetv2,
     'efficientnet-b7': Efficientnet,
     'efficientnet-b8': Efficientnet,
-    'resnet18': resnet18
+    'resnet18': resnet18,
+    'vgg11': vgg11
 }
 
 
@@ -59,4 +60,4 @@ TEST_LABEL_DIR = BASE + 'val.txt'
 
 
 ##训练完成，权重文件的保存路径,默认保存在trained_model下
-TRAINED_MODEL = BASE + 'weights/resnet18/.pth'
+TRAINED_MODEL = BASE + 'weights/vgg11/best.pth'
