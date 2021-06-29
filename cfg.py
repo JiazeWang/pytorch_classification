@@ -4,9 +4,9 @@
 # @author :lxztju
 # @github : https://github.com/lxztju
 import os
-home = os.path.expanduser('~')
+home = '/research/dept8/jzwang/project/ROP/pytorch_classification'
 ##数据集的类别
-NUM_CLASSES = 206
+NUM_CLASSES = 3
 
 #训练时batch的大小
 BATCH_SIZE = 32
@@ -16,7 +16,7 @@ INPUT_SIZE = 300
 #训练最多的epoch
 MAX_EPOCH = 100
 # 使用gpu的数目
-GPUS = 2
+GPUS = 1
 # 从第几个epoch开始resume训练，如果为0，从头开始
 RESUME_EPOCH = 0
 
@@ -29,7 +29,7 @@ LR = 1e-3
 # 采用的模型名称
 model_name = 'resnext101_32x32d'
 
-from models import Resnet50, Resnet101, Resnext101_32x8d,Resnext101_32x16d, Densenet121, Densenet169, Mobilenetv2, Efficientnet, Resnext101_32x32d, Resnext101_32x48d
+from models import Resnet50, Resnet101, Resnext101_32x8d,Resnext101_32x16d, Densenet121, Densenet169, Mobilenetv2, Efficientnet, Resnext101_32x32d, Resnext101_32x48d, resnet18
 MODEL_NAMES = {
     'resnext101_32x8d': Resnext101_32x8d,
     'resnext101_32x16d': Resnext101_32x16d,
@@ -41,7 +41,8 @@ MODEL_NAMES = {
     'densenet169': Densenet169,
     'moblienetv2': Mobilenetv2,
     'efficientnet-b7': Efficientnet,
-    'efficientnet-b8': Efficientnet
+    'efficientnet-b8': Efficientnet,
+    'resnet18': resnet18
 }
 
 
@@ -52,14 +53,10 @@ BASE = home + '/data/'
 SAVE_FOLDER = BASE + 'weights/'
 
 #数据集的存放位置
-TRAIN_LABEL_DIR =BASE + 'train.txt'     
+TRAIN_LABEL_DIR =BASE + 'train.txt'
 VAL_LABEL_DIR = BASE + 'val.txt'
-TEST_LABEL_DIR = BASE + 'test.txt'
+TEST_LABEL_DIR = BASE + 'val.txt'
 
 
 ##训练完成，权重文件的保存路径,默认保存在trained_model下
-TRAINED_MODEL = BASE + 'weights/resnext101_32x32d/epoch_40.pth'
-
-
-
-
+TRAINED_MODEL = BASE + 'weights/resnet18/.pth'
