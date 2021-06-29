@@ -11,7 +11,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from data import train_dataloader,train_datasets
-import cfg
+import cfg0
 from utils import adjust_learning_rate_cosine, adjust_learning_rate_step
 
 
