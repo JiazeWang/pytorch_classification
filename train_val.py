@@ -195,15 +195,3 @@ for iteration in range(start_iter, max_iter):
     if iteration % 10 == 0:
         print('Epoch:' + repr(epoch) + ' || epochiter: ' + repr(iteration % epoch_size) + '/' + repr(epoch_size)
               + '|| Totel iter ' + repr(iteration) + ' || Loss: %.6f||' % (loss.item()) + 'ACC: %.3f ||' %(train_acc * 100) + 'LR: %.8f' % (lr))
-
-
-
-
-
-
-
-
-
-
-
-

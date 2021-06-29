@@ -14,7 +14,7 @@ BATCH_SIZE = 32
 #网络默认输入图像的大小
 INPUT_SIZE = 300
 #训练最多的epoch
-MAX_EPOCH = 100
+MAX_EPOCH = 200
 # 使用gpu的数目
 GPUS = 1
 # 从第几个epoch开始resume训练，如果为0，从头开始
