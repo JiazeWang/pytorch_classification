@@ -57,6 +57,7 @@ class RandomGaussianBlur(object):
 
 
 mean, std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
+"""
 def get_train_transform(mean=mean, std=std, size=0):
     train_transform = transforms.Compose([
         transforms.Resize(224, 224),
@@ -99,7 +100,7 @@ def get_test_transform(mean=mean, std=std, size=0):
         transforms.ToTensor(),
         transforms.Normalize(mean=mean, std=std),
     ])
-"""
+
 
 def tta_test_transform(mean=mean, std=std, size=0):
     return transforms.Compose([
