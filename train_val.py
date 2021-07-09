@@ -41,7 +41,7 @@ def test():
             correct = (prediction == labels).sum()
             total_correct += correct
             print('Iteration: {}/{}'.format(iteration, max_iter), 'ACC: %.3f' %(correct.float()/batch_size))
-    print('All ACC: %.3f'%(total_correct.float()/(len(val_dataloader)* batch_size)))
+    print('All ACC: %.3f'%(float(total_correct.float()/(len(val_dataloader)* batch_size))))
 
 
 def load_checkpoint(filepath):
