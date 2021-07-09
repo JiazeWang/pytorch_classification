@@ -143,10 +143,9 @@ for iteration in range(start_iter, max_iter):
         epoch += 1
         if epoch > 1:
             pass
-
+        test()
         ###保存模型
         model.train()
-        test()
         if epoch % 3 == 0 and epoch > 0:
             if cfg.GPUS > 1:
                 checkpoint = {'model': model.module,

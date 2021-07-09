@@ -103,7 +103,7 @@ warmup_steps = warmup_epoch * epoch_size
 global_step = 0
 
 # step 学习率调整参数
-stepvalues = (10 * epoch_size, 20 * epoch_size, 30 * epoch_size)
+stepvalues = (100 * epoch_size, 200 * epoch_size, 300* epoch_size)
 step_index = 0
 
 model.train()
