@@ -41,7 +41,7 @@ def test():
             correct = (prediction == labels).sum()
             total_correct += correct
             print('Iteration: {}/{}'.format(iteration, max_iter), 'ACC: %.3f' %(correct.float()/batch_size))
-    print('All ACC: %.3f'%(total_correct.float()/(len(val_dataloader)* batch_size)).float())
+    print('All ACC: %.3f'%(total_correct.float()/(len(val_dataloader)* batch_size)))
 
 
 def load_checkpoint(filepath):
@@ -143,9 +143,10 @@ for iteration in range(start_iter, max_iter):
         epoch += 1
         if epoch > 1:
             pass
-        test()
+
         ###保存模型
         model.train()
+        test()
         if epoch % 3 == 0 and epoch > 0:
             if cfg.GPUS > 1:
                 checkpoint = {'model': model.module,
