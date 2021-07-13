@@ -18,7 +18,7 @@ MAX_EPOCH = 500
 # 使用gpu的数目
 GPUS = 1
 # 从第几个epoch开始resume训练，如果为0，从头开始
-RESUME_EPOCH = 0
+RESUME_EPOCH = 500
 
 WEIGHT_DECAY = 5e-4
 MOMENTUM = 0.9
