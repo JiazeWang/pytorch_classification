@@ -129,7 +129,8 @@ global_step = 0
 # step 学习率调整参数
 stepvalues = (10 * epoch_size, 20 * epoch_size, 30 * epoch_size)
 step_index = 0
-
+print("test model")
+test()
 
 for iteration in range(start_iter, max_iter):
 
